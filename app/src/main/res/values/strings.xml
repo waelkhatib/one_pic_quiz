@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">الغاز و مسابقات</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="admob_publisher_id">ca-app-pub-9849075853612576/7900293847</string> <!-- Change AdMob Id -->
+    <string name="admob_intertestial_id">ca-app-pub-9849075853612576/1934485443</string><!-- your admob intertestial ad id-->
+    <string name="number_of_stage_ad">3</string>
+
+    <!-- play store application link i.e more apps -->
+    <string name="play_more_apps">https://play.google.com/store/apps/developer?id=android+tr</string>  
+    
+    <!-- your facebook url -->
+    <string name="facebook_url">http://facebook.com</string>
+    
+    
+     <!-- Reset Dailog Message -->
+    <string name="reset_msg">إذا كنت ترغب بإعادة اللعب اضغط نعم وإلا إضغط لا</string>
+    <string name="reset_title">هل ترغب بإعادة اللعب؟</string>
+    <string name="reset_yes">نعم</string>
+    <string name="reset_no">لا</string>
+    <string name="reset_msg_1">!مبروك</string>
+    <string name="reset_msg_2">مبروك!لقد أكملت هذا الجزء من اللعبة.\nلا تتردد في العودة فيما بعد للعب مراحل جديدة</string>
+    
+    
+    <!-- Score Management -->
+    <string name="how_much_for_first_letter">15</string><!-- how much point you set for use that hint -->
+    <string name="how_much_for_bomb">25</string>
+    <string name="how_much_for_skip">35</string>
+    
+    <string name="first_letter_msg_1">هل تريد اكتشاف الحرف الأول مقابل 15 قطعة نقدية؟</string>
+    <string name="first_letter_msg_2">!يجب أن تملك 15 قطعة نقدية </string>
+    <string name="first_letter_msg_3">!اكتشف الحرف الأول</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="ok">حسناً</string>
+    
+    <string name="bomb_msg_1">هل تريد إخفاء ثلاث أحرف مقابل 25 قطعة نقدية؟</string>
+    <string name="bomb_msg_2">!يجب أن تملك 25 قطعة نقدية</string>
+    <string name="bomb_msg_3">!أخفي ثلاث أحرف</string>
+    
+    <string name="skip_msg_1">هل تريد تجاوز هذا السؤال مقابل 35 قطعة نقدية؟</string>
+    <string name="skip_msg_2">!يجب أن تملك 35 قطعة نقدية</string>
+    <string name="skip_msg_3">!تجاوز سؤال</string>
+    
+    <string name="point_give">1|10</string><!-- note that here 1 is indicate 1st stage and 10 is point so here we have 10 point already in that game for first start -->
+    
+    <string name="a">ا</string>
+    
+    
+     <!-- Earn Coin Management -->
+    <string name="facebook">عمل لايك على الفيس بوك ب 10 قطع نقدية</string>
+	<string name="twitter">عمل متابعة على تويتر ب 25 قطعة نقدية</string>
+	<string name="youtube">عمل اشتراك على يوتيوب ب 25 قطعة نقدية</string>
+	<string name="rateapp">عمل تصويت للتطبيق ب 25 قطعة نقدية</string>
+	<string name="moreapp">للحصول على مزيد من التطبيقات ب 25 قطعة نقدية</string>
+	<string name="website">زيارة الموقع ب 20 قطعة نقدية</string>
+	<string name="shareapp">مشاركة التطبيق ب 50 قطعة نقدية</string>
+	
+	<string name="how_much_for_facebook_coins">10</string>
+	<string name="how_much_for_twitter_coins">25</string>
+	<string name="how_much_for_youtube_coins">25</string>
+	<string name="how_much_for_rateapp_coins">25</string>
+	<string name="how_much_for_moreapp_coins">25</string>
+	<string name="how_much_for_website_coins">20</string>
+	<string name="how_much_for_shareapp_coins">50</string>
+	
+	<string name="facebook_link">https://play.google.com/store/apps/developer?id=android+tr</string>
+	<string name="twitter_link">https://play.google.com/store/apps/developer?id=android+tr</string>
+	<string name="youtube_link">https://play.google.com/store/apps/developer?id=android+tr</string>
+	<string name="website_link">http://simplexso.com</string>
+	<string name="was">w</string>
+	<string name="k">"   dsd"</string>
+    
+    
+    
+    
+
+</resources>

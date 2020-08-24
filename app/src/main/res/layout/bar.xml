@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:gravity="center_horizontal">
+    
+    
+    <Button
+        android:id="@+id/AllAppsGoogle"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:background="@drawable/googleplayclickedxml" 
+        />
+    
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="52.0dip"
+         android:layout_height="50.0dip"
+         android:layout_marginLeft="5dp"
+         android:background="@drawable/facebookclicked"
+         android:visibility="gone" />
+     
+      <Button
+        android:id="@+id/restartGame"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:background="@drawable/restartxml" 
+        android:layout_marginLeft="5dp"/>
+      
+      <Button
+         android:id="@+id/earnCoin"
+         android:layout_width="50.0dip"
+         android:layout_height="50.0dip"
+         android:background="@drawable/earncoinclickedxml" 
+         android:layout_marginLeft="5dp"/>
+    
+
+</LinearLayout>

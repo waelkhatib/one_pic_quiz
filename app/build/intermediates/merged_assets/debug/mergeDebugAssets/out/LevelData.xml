@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<music>
+     <level>
+        <levelNumber>1</levelNumber>
+		<musicId>car</musicId>
+		<ribbon>وسيلة نقل</ribbon>
+		<answer>سيارة</answer>
+    </level>	
+	<level>
+        <levelNumber>2</levelNumber>
+		<musicId>spring</musicId>
+		<ribbon>فصول السنة</ribbon>
+		<answer>ربيع</answer>
+    </level>
+	<level>
+        <levelNumber>3</levelNumber>
+		<musicId>barber</musicId>
+		<ribbon>مهن</ribbon>
+		<answer>حلاق</answer>
+    </level>
+    <level>
+        <levelNumber>4</levelNumber>
+		<musicId>bus</musicId>
+		<ribbon>وسيلة نقل</ribbon>
+		<answer>باص</answer>
+    </level>
+    <level>
+        <levelNumber>5</levelNumber>
+		<musicId>winter</musicId>
+		<ribbon>فصول السنة</ribbon>
+		<answer>شتاء</answer>
+    </level>
+	<level>
+        <levelNumber>6</levelNumber>
+		<musicId>tailor</musicId>
+		<ribbon>مهن</ribbon>
+		<answer>خياط</answer>
+    </level>
+    <level>
+        <levelNumber>7</levelNumber>
+		<musicId>train</musicId>
+		<ribbon>وسيلة نقل</ribbon>
+		<answer>قطار</answer>
+    </level>
+    <level>
+        <levelNumber>8</levelNumber>
+		<musicId>carpenter</musicId>
+		<ribbon>مهن</ribbon>
+		<answer>نجار</answer>
+    </level>
+    <level>
+        <levelNumber>9</levelNumber>
+		<musicId>summer</musicId>
+		<ribbon>فصول السنة</ribbon>
+		<answer>صيف</answer>
+    </level> 
+    <level>
+        <levelNumber>10</levelNumber>
+		<musicId>ship</musicId>
+		<ribbon>وسيلة نقل</ribbon>
+		<answer>سفينة</answer>
+    </level>
+    <level>
+        <levelNumber>11</levelNumber>
+		<musicId>blacksmith</musicId>
+		<ribbon>مهن</ribbon>
+		<answer>حداد</answer>
+    </level>
+    <level>
+        <levelNumber>12</levelNumber>
+		<musicId>autumn</musicId>
+		<ribbon>فصول السنة</ribbon>
+		<answer>خريف</answer>
+    </level>
+    
+	
+	<level>
+        <levelNumber>13</levelNumber>
+		<musicId>butcher</musicId>
+		<ribbon>مهن</ribbon>
+		<answer>لحام</answer>
+    </level>
+	<level>
+        <levelNumber>14</levelNumber>
+		<musicId>airplane</musicId>
+		<ribbon>وسيلة نقل</ribbon>
+		<answer>طائرة</answer>
+    </level>
+    
+	<level>
+        <levelNumber>15</levelNumber>
+		<musicId>baker</musicId>
+		<ribbon>مهن</ribbon>
+		<answer>خباز</answer>
+    </level>
+	<level>
+        <levelNumber>16</levelNumber>
+		<musicId>gstation</musicId>
+		<ribbon>عضو</ribbon>
+		<answer>الكبد</answer>
+    </level>
+ 	<level>
+        <levelNumber>17</levelNumber>
+		<musicId>amanita</musicId>
+		<ribbon>فطر سام</ribbon>
+		<answer>أمانيت</answer>
+    </level>
+    
+	
+    <level>
+        <levelNumber>18</levelNumber>
+		<musicId>place4</musicId>
+		<ribbon>أماكن شهيرة</ribbon>
+		<answer>برجإيفل</answer>
+    </level>
+	<level>
+        <levelNumber>19</levelNumber>
+		<musicId>volcano</musicId>
+		<ribbon>ظواهر طبيعية</ribbon>
+		<answer>بركان</answer>
+    </level>
+	<level>
+        <levelNumber>20</levelNumber>
+		<musicId>dam</musicId>
+		<ribbon>وسيلة لحفظ المياه</ribbon>
+		<answer>سدمائي</answer>
+    </level>
+	<level>
+        <levelNumber>21</levelNumber>
+		<musicId>place1</musicId>
+		<ribbon>أماكن شهيرة</ribbon>
+		<answer>مكة</answer>
+    </level>
+	<level>
+        <levelNumber>22</levelNumber>
+		<musicId>earthquake</musicId>
+		<ribbon>ظواهر طبيعية</ribbon>
+		<answer>زلزال</answer>
+    </level>
+	<level>
+        <levelNumber>23</levelNumber>
+		<musicId>moniliformopse</musicId>
+		<ribbon>النباتات اللابذرية</ribbon>
+		<answer>سراخس</answer>
+    </level>
+	<level>
+        <levelNumber>24</levelNumber>
+		<musicId>place3</musicId>
+		<ribbon>أماكن شهيرة</ribbon>
+		<answer>اهرامات</answer>
+    </level>
+	<level>
+        <levelNumber>25</levelNumber>
+		<musicId>eclipsesun</musicId>
+		<ribbon>ظواهر طبيعية</ribbon>
+		<answer>الكسوف</answer>
+    </level>
+	<level>
+        <levelNumber>26</levelNumber>
+		<musicId>place2</musicId>
+		<ribbon>أماكن شهيرة</ribbon>
+		<answer>تدمر</answer>
+    </level>
+	<level>
+        <levelNumber>27</levelNumber>
+		<musicId>alga</musicId>
+		<ribbon>أعشاب البحر</ribbon>
+		<answer>طحالب</answer>
+    </level>
+	<level>
+        <levelNumber>28</levelNumber>
+		<musicId>eclipsemoon</musicId>
+		<ribbon>ظواهر طبيعية</ribbon>
+		<answer>الخسوف</answer>
+    </level>
+	<level>
+        <levelNumber>29</levelNumber>
+		<musicId>place5</musicId>
+		<ribbon>أماكن شهيرة</ribbon>
+		<answer>بصرى</answer>
+    </level>
+    <level>
+        <levelNumber>30</levelNumber>
+		<musicId>penicillium</musicId>
+		<ribbon>حشرة</ribbon>
+		<answer>يعسوب</answer>
+    </level>
+	<level>
+        <levelNumber>31</levelNumber>
+		<musicId>snake</musicId>
+		<ribbon>أخطر الأفاعي</ribbon>
+		<answer>الكوبرا</answer>
+    </level>
+	<level>
+        <levelNumber>32</levelNumber>
+		<musicId>symbol1</musicId>
+		<ribbon>رموز رياضية</ribbon>
+		<answer>تكامل</answer>
+    </level>
+	<level>
+        <levelNumber>33</levelNumber>
+		<musicId>shape1</musicId>
+		<ribbon>منحنيات شهيرة</ribbon>
+		<answer>قطعمكافئ</answer>
+    </level>
+	<level>
+        <levelNumber>34</levelNumber>
+		<musicId>pancreas</musicId>
+		<ribbon>غدة تفرز الأنسولين</ribbon>
+		<answer>بنكرياس</answer>
+    </level>
+	<level>
+        <levelNumber>35</levelNumber>
+		<musicId>symbol2</musicId>
+		<ribbon>رموز رياضية</ribbon>
+		<answer>نهاية</answer>
+    </level>
+	<level>
+        <levelNumber>36</levelNumber>
+		<musicId>shape2</musicId>
+		<ribbon>منحنيات شهيرة</ribbon>
+		<answer>قطعناقص</answer>
+    </level>
+	<level>
+	<levelNumber>37</levelNumber>
+		<musicId>thyroid</musicId>
+		<ribbon>غدة</ribbon>
+		<answer>الدرقية</answer>
+    </level>
+	<level>
+	<levelNumber>38</levelNumber>
+		<musicId>acid1</musicId>
+		<ribbon>حيوان</ribbon>
+		<answer>كوالا</answer>
+    </level>
+	<level>
+	    <levelNumber>39</levelNumber>
+		<musicId>pancreas</musicId>
+		<ribbon>غدة</ribbon>
+		<answer>الكبد</answer>
+    </level>
+	<level>
+        <levelNumber>40</levelNumber>
+		<musicId>shape3</musicId>
+		<ribbon>حيوان منقرض</ribbon>
+		<answer>ماموث</answer>
+    </level>
+	<level>
+	<levelNumber>41</levelNumber>
+		<musicId>acid2</musicId>
+		<ribbon>مدينة</ribbon>
+	    <answer>الرياض</answer>
+    </level>
+	<level>
+	<levelNumber>42</levelNumber>
+	<musicId>backteria1</musicId>
+	<ribbon>دولة اوربية</ribbon>
+	<answer>ألمانيا</answer>
+    </level>
+	<level>
+	<levelNumber>43</levelNumber>
+	<musicId>earth1</musicId>
+	<ribbon>دولة اسيوية</ribbon>
+	<answer>ماليزيا</answer>
+    </level>
+	<level>
+	<levelNumber>44</levelNumber>
+	<musicId>logo1</musicId>
+	<ribbon>دولة اسيوية</ribbon>
+	<answer>تايلاند</answer>
+    </level>
+	<level>
+	<levelNumber>45</levelNumber>
+	<musicId>planet1</musicId>
+	<ribbon>نباتات برية</ribbon>
+	<answer>الهالوك</answer>
+    </level>
+	<level>
+	<levelNumber>46</levelNumber>
+	<musicId>logo2</musicId>
+	<ribbon>كوكب</ribbon>
+	<answer>زحل</answer>
+    </level>
+	<level>
+	<levelNumber>47</levelNumber>
+	<musicId>backteria2</musicId>
+	<ribbon>كوكب</ribbon>
+	<answer>نبتون</answer>
+    </level>
+	<level>
+	<levelNumber>48</levelNumber>
+	<musicId>pronze</musicId>
+	<ribbon>النحاس والقصدير</ribbon>
+	<answer>البرونز</answer>
+    </level>
+	<level>
+	<levelNumber>49</levelNumber>
+	<musicId>backteria3</musicId>
+	<ribbon>دولة اوربية</ribbon>
+	<answer>السويد</answer>
+    </level>
+	<level>
+	<levelNumber>50</levelNumber>
+	<musicId>planet2</musicId>
+	<ribbon>دولة اوربية</ribbon>
+	<answer>النروج</answer>
+    </level>
+ </music>

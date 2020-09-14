@@ -38,9 +38,11 @@
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:testOnly="true"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
             android:name="com.gkcrop.picturePuzzle.SplashActivity"
@@ -79,10 +81,6 @@
 
         <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
         <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" />
 
         <receiver
             android:name="com.google.android.gms.analytics.AnalyticsReceiver"

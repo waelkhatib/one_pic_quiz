@@ -31,19 +31,13 @@ import com.google.android.gms.ads.InterstitialAd;
 
 public class MainActivity extends Activity {
 
-	Button Facebook;
-	Button GooglePlayApps;
-	Button LetsPlay;
-	Context context;
-	Button movieShadow;
-	Button resButton;
+	// --Commented out by Inspection (14/09/2020 21:48):Button movieShadow;
 	//Button earnButton;
 	private  final int INTERNET_FOR_STORE=1;
 	private  final int ACCESS_NETWORK_STATE_FOR_STORE=2;
 	private  final int INTERNET_FOR_FACEBOOK=3;
 	private  final int ACCESS_NETWORK_STATE_FOR_FACEBOOK=4;
-	private AdView mAdView;
-	private InterstitialAd mInterstitial;
+    private InterstitialAd mInterstitial;
   //public static MediaPlayer mp;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +46,7 @@ public class MainActivity extends Activity {
 //           mp=MediaPlayer.create(MainActivity.this, R.raw.begin);
 //           mp.setLooping(true);
 //           mp.start();	
-		mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
 		mAdView.loadAd(new AdRequest.Builder().build());
 
 		mInterstitial = new InterstitialAd(this);
@@ -77,14 +71,14 @@ public class MainActivity extends Activity {
 
 		if(!fileExist()){writeData("1|10");}
 
-		LetsPlay = (Button)findViewById(R.id.letsPlay);
-		GooglePlayApps = (Button)findViewById(R.id.AllAppsGoogle);
-		resButton = (Button)findViewById(R.id.restartGame);
-		Facebook = (Button)findViewById(R.id.button1);
+		Button letsPlay = findViewById(R.id.letsPlay);
+		Button googlePlayApps = findViewById(R.id.AllAppsGoogle);
+		Button resButton = findViewById(R.id.restartGame);
+		Button facebook = findViewById(R.id.button1);
 
-		context = this;
 
-		LetsPlay.setOnClickListener(new View.OnClickListener() {
+
+		letsPlay.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -96,7 +90,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		GooglePlayApps.setOnClickListener(new View.OnClickListener() {
+		googlePlayApps.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -161,7 +155,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		Facebook.setOnClickListener(new View.OnClickListener() {
+		facebook.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -211,7 +205,7 @@ public class MainActivity extends Activity {
 					Intent.ACTION_VIEW,
 					Uri.parse(getString(R.string.facebook_url))));
 		}else {
-			createDialog(R.string.warning,R.string.you_must_have_internet_access);
+			createDialog(R.string.you_must_have_internet_access);
 		}
 	}
 //	protected static void playSound() {
@@ -226,10 +220,9 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	public boolean fileExist(){
+	private boolean fileExist(){
 		File file = new File(getFilesDir()+File.separator+"thewords.dat");
-		if(file.exists()){return true;}
-		else{return false;}    
+		return file.exists();
 	}
 
 	private void writeData(String dataStr){
@@ -238,11 +231,11 @@ public class MainActivity extends Activity {
 			outputStreamWriter.write(dataStr);
 			outputStreamWriter.close();
 		}
-		catch (IOException e) {} 
+		catch (IOException ignored) {}
 
 	}
-	public boolean isConnected(boolean is_data) {
-		boolean connected = false;
+	private boolean isConnected(boolean is_data) {
+		boolean connected;
 		try {
 			ConnectivityManager cm = (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 			NetworkInfo nInfo = cm.getActiveNetworkInfo();
@@ -254,7 +247,7 @@ public class MainActivity extends Activity {
 		} catch (Exception e) {
 			Log.e("Connectivity Exception", e.getMessage());
 		}
-		return connected;
+		return false;
 	}
 	private void connect_to_SyriaStore() {
 		if(isConnected(true)) {
@@ -262,14 +255,14 @@ public class MainActivity extends Activity {
 					Intent.ACTION_VIEW,
 					Uri.parse(getString(R.string.play_more_apps))));
 		}else {
-			createDialog(R.string.warning,R.string.you_must_turn_on_mobile_data);
+			createDialog(R.string.you_must_turn_on_mobile_data);
 		}
 	}
 
-	private void createDialog(int titleId,int messageId) {
+	private void createDialog(int messageId) {
 		AlertDialog.Builder alert = new AlertDialog.Builder(
 				MainActivity.this);
-		alert.setTitle(getString(titleId));
+		alert.setTitle(getString(R.string.warning));
 		alert.setMessage(getString(messageId));
 
 		alert.setPositiveButton(getString(R.string.ok),

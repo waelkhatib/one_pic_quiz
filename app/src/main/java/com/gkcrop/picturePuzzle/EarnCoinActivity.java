@@ -2,7 +2,6 @@ package com.gkcrop.picturePuzzle;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -23,28 +22,34 @@ import android.widget.TextView;
 
 public class EarnCoinActivity extends Activity {
 
-	Button btnfb,btntwitter,btnyoutube,btnrateapp,btnmoreapp,btnwebsite,btnshareapp,btnback;
+	private Button btnfb;
+	private Button btntwitter;
+	private Button btnyoutube;
+	private Button btnrateapp;
+	private Button btnmoreapp;
+	private Button btnwebsite;
+	private Button btnshareapp;
 	private String lvl = "0";
 	private String coins = "0";
-	TextView txtcoin,txttitle;
-	private AdView mAdView;
+	private TextView txtcoin;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.earn_coin);
-		
-		mAdView = (AdView) findViewById(R.id.adView);
+
+		AdView mAdView = findViewById(R.id.adView);
 		mAdView.loadAd(new AdRequest.Builder().build());
-		btnfb=(Button)findViewById(R.id.button1);
-		btntwitter=(Button)findViewById(R.id.button2);
-		btnyoutube=(Button)findViewById(R.id.button3);
-		btnrateapp=(Button)findViewById(R.id.button4);
-		btnmoreapp=(Button)findViewById(R.id.button5);
-		btnwebsite=(Button)findViewById(R.id.button6);
-		btnshareapp=(Button)findViewById(R.id.button7);
-		btnback=(Button)findViewById(R.id.button_back);
-		txtcoin=(TextView)findViewById(R.id.textView1);
-		txttitle=(TextView)findViewById(R.id.textView2);
+		btnfb= findViewById(R.id.button1);
+		btntwitter= findViewById(R.id.button2);
+		btnyoutube= findViewById(R.id.button3);
+		btnrateapp= findViewById(R.id.button4);
+		btnmoreapp= findViewById(R.id.button5);
+		btnwebsite= findViewById(R.id.button6);
+		btnshareapp= findViewById(R.id.button7);
+		Button btnback = findViewById(R.id.button_back);
+		txtcoin= findViewById(R.id.textView1);
+		TextView txttitle = findViewById(R.id.textView2);
 		
 		txttitle.setText("‰ﬁÊœ „Ã«‰Ì…");
 		
@@ -70,7 +75,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.FACEBOOK, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.FACEBOOK, Boolean.TRUE);
 				btnfb.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_facebook_coins)));
 				txtcoin.setText(coins);
@@ -91,7 +96,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.TWITTER, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.TWITTER, Boolean.TRUE);
 				btntwitter.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_twitter_coins)));
 				txtcoin.setText(coins);
@@ -109,7 +114,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.YOUTUBE, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.YOUTUBE, Boolean.TRUE);
 				btnyoutube.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_youtube_coins)));
 				txtcoin.setText(coins);
@@ -128,7 +133,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.RATEAPP, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.RATEAPP, Boolean.TRUE);
 				btnrateapp.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_rateapp_coins)));
 				txtcoin.setText(coins);
@@ -154,7 +159,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.MOREAPP, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.MOREAPP, Boolean.TRUE);
 				btnmoreapp.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_moreapp_coins)));
 				txtcoin.setText(coins);
@@ -173,7 +178,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.WEBSITE, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.WEBSITE, Boolean.TRUE);
 				btnwebsite.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_website_coins)));
 				txtcoin.setText(coins);
@@ -191,7 +196,7 @@ public class EarnCoinActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.SHAREAPP, Boolean.valueOf(true));
+				EarnCoin.setIfEarnButtonClicked(EarnCoinActivity.this,EarnCoin.SHAREAPP, Boolean.TRUE);
 				btnshareapp.setEnabled(false);
 				coins = "" + (Integer.parseInt(coins)+Integer.parseInt(getString(R.string.how_much_for_shareapp_coins)));
 				txtcoin.setText(coins);
@@ -224,7 +229,7 @@ public class EarnCoinActivity extends Activity {
 
 		txtcoin.setText(coins);
 		
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.FACEBOOK).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.FACEBOOK))
 		{
 			btnfb.setEnabled(true);
 		}
@@ -233,7 +238,7 @@ public class EarnCoinActivity extends Activity {
 			btnfb.setEnabled(false);
 		}
 
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.TWITTER).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.TWITTER))
 		{
 			btntwitter.setEnabled(true);
 		}
@@ -242,7 +247,7 @@ public class EarnCoinActivity extends Activity {
 			btntwitter.setEnabled(false);
 		}
 
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.YOUTUBE).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.YOUTUBE))
 		{
 			btnyoutube.setEnabled(true);
 		}
@@ -251,7 +256,7 @@ public class EarnCoinActivity extends Activity {
 			btnyoutube.setEnabled(false);
 		}
 
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.RATEAPP).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.RATEAPP))
 		{
 			btnrateapp.setEnabled(true);
 		}
@@ -260,7 +265,7 @@ public class EarnCoinActivity extends Activity {
 			btnrateapp.setEnabled(false);
 		}
 
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.MOREAPP).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.MOREAPP))
 		{
 			btnmoreapp.setEnabled(true);
 		}
@@ -269,7 +274,7 @@ public class EarnCoinActivity extends Activity {
 			btnmoreapp.setEnabled(false);
 		}
 
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.WEBSITE).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.WEBSITE))
 		{
 			btnwebsite.setEnabled(true);
 		}
@@ -278,7 +283,7 @@ public class EarnCoinActivity extends Activity {
 			btnwebsite.setEnabled(false);
 		}
 
-		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.SHAREAPP).booleanValue())
+		if(!EarnCoin.getIfEarnButtonClicked(EarnCoinActivity.this, EarnCoin.SHAREAPP))
 		{
 			btnshareapp.setEnabled(true);
 		}
@@ -289,10 +294,9 @@ public class EarnCoinActivity extends Activity {
 	}
 	
 	
-	public boolean fileExist(){
+	private boolean fileExist(){
 		File file = new File(getFilesDir()+File.separator+"thewords.dat");
-		if(file.exists()){return true;}
-		else{return false;}    
+		return file.exists();
 	}
 
 	private void writeData(String dataStr){
@@ -301,7 +305,7 @@ public class EarnCoinActivity extends Activity {
 			outputStreamWriter.write(dataStr);
 			outputStreamWriter.close();
 		}
-		catch (IOException e) {} 
+		catch (IOException ignored) {}
 
 	}
 	
@@ -315,7 +319,7 @@ public class EarnCoinActivity extends Activity {
 							inputStream);
 					BufferedReader bufferedReader = new BufferedReader(
 							inputStreamReader);
-					String receiveString = "";
+					String receiveString;
 					StringBuilder stringBuilder = new StringBuilder();
 					while ((receiveString = bufferedReader.readLine()) != null) {
 						stringBuilder.append(receiveString);
@@ -323,8 +327,7 @@ public class EarnCoinActivity extends Activity {
 					inputStream.close();
 					ret = stringBuilder.toString();
 				}
-			} catch (FileNotFoundException e) {
-			} catch (IOException e) {
+			} catch (IOException ignored) {
 			}
 			return ret;
 		}

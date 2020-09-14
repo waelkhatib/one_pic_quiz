@@ -10,11 +10,13 @@
     <string name="number_of_stage_ad">3</string>
 
     <!-- play store application link i.e more apps -->
-    <string name="play_more_apps">https://play.google.com/store/apps/developer?id=android+tr</string>  
+    <string name="play_more_apps">https://www.syriastore.sy/app/com.gkcrop.picturePuzzle</string>
     
     <!-- your facebook url -->
     <string name="facebook_url">http://facebook.com</string>
-    
+    <string name="you_must_turn_on_mobile_data">يجب تشغيل بيانات الجوال</string>
+    <string name="you_must_have_internet_access">يجب أن يكون لديك وصول للإنترنيت</string>
+    <string name="warning">تحذير</string>
     
      <!-- Reset Dailog Message -->
     <string name="reset_msg">إذا كنت ترغب بإعادة اللعب اضغط نعم وإلا إضغط لا</string>

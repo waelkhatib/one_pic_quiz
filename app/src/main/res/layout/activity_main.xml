@@ -5,43 +5,35 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bg_sp" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/letsPlay"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" 
-        android:layout_marginTop="10dp">
 
         <Button
             android:id="@+id/AllAppsGoogle"
             android:layout_width="50.0dip"
             android:layout_height="50.0dip"
-            android:background="@drawable/googleplayclickedxml" />
+            android:layout_alignStart="@+id/letsPlay"
+            android:layout_below="@+id/letsPlay"
+            android:background="@drawable/store_bg" />
 
         <Button
             android:id="@+id/button1"
             android:layout_width="52.0dip"
             android:layout_height="50.0dip"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/facebookclicked"
-            android:visibility="gone" />
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/letsPlay"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/facebook_bg"
+            />
 
         <Button
             android:id="@+id/restartGame"
             android:layout_width="50.0dip"
             android:layout_height="50.0dip"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/restartxml" />
+            android:layout_alignEnd="@+id/letsPlay"
+            android:layout_below="@+id/letsPlay"
+            android:background="@drawable/restart_bg" />
 
-        <Button
-            android:id="@+id/earnCoin"
-            android:layout_width="50.0dip"
-            android:layout_height="50.0dip"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/earncoinclickedxml" />
-    </LinearLayout>
+
+
 
     <Button
         android:id="@+id/letsPlay"
@@ -50,6 +42,7 @@
         android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20.0dip"
+        android:layout_marginBottom="20dip"
         android:background="@drawable/letsplayclickxml" />
 
     <ImageView

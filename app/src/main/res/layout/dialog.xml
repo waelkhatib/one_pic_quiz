@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_margin="10dp"
@@ -44,12 +43,6 @@
         android:shadowColor="#000000"
         android:text="" />
 
-    <LinearLayout
-        android:id="@+id/ad_rect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
 
-    </LinearLayout>
 
 </LinearLayout>

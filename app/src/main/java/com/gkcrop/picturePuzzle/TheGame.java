@@ -8,12 +8,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -37,6 +41,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.Typeface;
@@ -45,6 +50,7 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -60,6 +66,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -120,7 +127,8 @@ private Context mContext;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.game_layout);
 		mContext=TheGame.this;
-		
+		((ProgressBar)findViewById(R.id.progressBar)).getIndeterminateDrawable()
+				.setColorFilter(ContextCompat.getColor(this, R.color.main_bg), PorterDuff.Mode.SRC_IN );
        
 		sb = new StringBuilder();
 		sb.append(Environment.getExternalStorageDirectory().toString()).append(File.separator).append(getString(R.string.app_name));
@@ -443,6 +451,7 @@ btn_ask.setOnTouchListener(new View.OnTouchListener() {
 	public boolean onTouch(View arg0, MotionEvent arg1) {
 		// TODO Auto-generated method stub
 		if(arg1.getActionMasked()==MotionEvent.ACTION_DOWN){
+
 			int image_id = mContext.getResources().getIdentifier("bo3_h", "drawable",
 					mContext.getPackageName());
 			btn_ask.setBackgroundResource(image_id);
@@ -904,16 +913,28 @@ private void clear_wrong_letter(final Button button) {
 	private String SaveBackground()
 	{
 		Bitmap bitmap;
-		RelativeLayout panelResult = findViewById(R.id.root);
-		panelResult.invalidate();
-		panelResult.setDrawingCacheEnabled(true);
-		panelResult.buildDrawingCache();
-		DisplayMetrics displaymetrics = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-		int i = displaymetrics.heightPixels;
-		int j = displaymetrics.widthPixels;
-		bitmap = Bitmap.createScaledBitmap(Bitmap.createBitmap(panelResult.getDrawingCache()), j, i, true);
-		panelResult.setDrawingCacheEnabled(false);
+		FutureTask<Bitmap> futureTask=new FutureTask<>(new Callable<Bitmap>() {
+			@Override
+			public Bitmap call() {
+				RelativeLayout panelResult = findViewById(R.id.root);
+				panelResult.invalidate();
+				panelResult.setDrawingCacheEnabled(true);
+				panelResult.buildDrawingCache();
+				DisplayMetrics displaymetrics = new DisplayMetrics();
+				getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+				int i = displaymetrics.heightPixels;
+				int j = displaymetrics.widthPixels;
+				Bitmap bitmap= Bitmap.createScaledBitmap(Bitmap.createBitmap(panelResult.getDrawingCache()), j, i, true);
+				panelResult.setDrawingCacheEnabled(false);
+				return bitmap;
+			}
+		});
+		runOnUiThread(futureTask);
+		try {
+			bitmap=futureTask.get();
+		} catch (InterruptedException | ExecutionException e) {
+			return null;
+		}
 		String s;
 		File file;
 
@@ -981,13 +1002,37 @@ private void clear_wrong_letter(final Button button) {
 	}
 
 	private void shareLevel() {
-		String path=SaveBackground();
-		File imagepath=new File(path);
-		Intent share = new Intent(Intent.ACTION_SEND);
-		share.setType("image/png");
-		share.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(imagepath));
-		startActivity(Intent.createChooser(share, "Share Image"));
 
+		new ShareLevelTask(this).execute();
+	}
+  private static 	class ShareLevelTask extends AsyncTask<Void,Void,String>{
+	  private final WeakReference<TheGame> activityReference;
+
+	  // only retain a weak reference to the activity
+	  ShareLevelTask(TheGame context) {
+		  activityReference = new WeakReference<>(context);
+	  }
+
+		@Override
+		protected void onPreExecute() {
+			activityReference.get().findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+		}
+
+		@Override
+		protected String doInBackground(Void... voids) {
+			return activityReference.get().SaveBackground();
+		}
+
+		@Override
+		protected void onPostExecute(String path) {
+			activityReference.get().findViewById(R.id.progressBar).setVisibility(View.GONE);
+			File imagepath=	new File(path);
+
+			Intent share = new Intent(Intent.ACTION_SEND);
+			share.setType("image/png");
+			share.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(imagepath));
+			activityReference.get().startActivity(Intent.createChooser(share, "Share Image"));
+		}
 	}
 
 }

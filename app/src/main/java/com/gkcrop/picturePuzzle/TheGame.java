@@ -723,6 +723,7 @@ private void clear_wrong_letter(final Button button) {
 		dialog.getWindow().getDecorView()
 		.setBackgroundResource(R.drawable.dialog_bg);
 		dialog.setCanceledOnTouchOutside(false);
+		dialog.setCancelable(false);
 		dialog.getWindow().setLayout(LayoutParams.MATCH_PARENT,
 				LayoutParams.WRAP_CONTENT);
 		String points = ""
@@ -755,9 +756,9 @@ private void clear_wrong_letter(final Button button) {
 					new ColorDrawable(android.graphics.Color.TRANSPARENT));
 			score.setVisibility(View.GONE);
 			dialogBtn.setVisibility(View.GONE);
-			ImageView coinicon = dialog
-					.findViewById(R.id.dialogIcon);
-			coinicon.setVisibility(View.GONE);
+//			ImageView coinicon = dialog
+//					.findViewById(R.id.dialogIcon);
+//			coinicon.setVisibility(View.GONE);
 			image.setImageUrl(null);
 			image.setOnClickListener(new View.OnClickListener() {
 				@Override

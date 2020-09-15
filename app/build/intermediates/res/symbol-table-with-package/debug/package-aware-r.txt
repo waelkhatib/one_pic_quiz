@@ -1343,7 +1343,6 @@ id default_activity_button
 id demote_common_words
 id demote_rfc822_hostnames
 id dialogBtn
-id dialogIcon
 id disableHome
 id donate_with
 id donate_with_google
@@ -2236,8 +2235,11 @@ style Widget_Compat_NotificationActionText
 style Widget_MediaRouter_Light_MediaRouteButton
 style Widget_MediaRouter_MediaRouteButton
 style Widget_Support_CoordinatorLayout
+style app_bg_style
+style bg_sp_style
 style dialogStyle
 style hbtn
+style white_style
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

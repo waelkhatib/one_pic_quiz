@@ -22,8 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="+5"
-            android:drawableLeft="@drawable/coin"
+            android:text="@string/_5"
+            android:drawableStart="@drawable/coin"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="32sp"
             android:textStyle="bold" />

@@ -1616,6 +1616,7 @@ layout wallet_test_layout
 menu main
 raw fal
 raw suc
+string _5
 string a
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2185,6 +2186,7 @@ style Widget_MediaRouter_MediaRouteButton
 style Widget_Support_CoordinatorLayout
 style app_bg_style
 style bg_sp_style
+style btn_char
 style dialogStyle
 style hbtn
 style white_style

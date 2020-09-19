@@ -12,16 +12,18 @@
             android:layout_height="50.0dip"
             android:layout_alignStart="@+id/letsPlay"
             android:layout_below="@+id/letsPlay"
-            android:background="@drawable/store_bg" />
+            android:background="@drawable/store_bg"
+            android:filterTouchesWhenObscured="true" />
 
         <Button
             android:id="@+id/button1"
             android:layout_width="52.0dip"
             android:layout_height="50.0dip"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_below="@+id/letsPlay"
             android:layout_centerHorizontal="true"
             android:background="@drawable/facebook_bg"
+            android:filterTouchesWhenObscured="true"
             />
 
         <Button
@@ -30,7 +32,8 @@
             android:layout_height="50.0dip"
             android:layout_alignEnd="@+id/letsPlay"
             android:layout_below="@+id/letsPlay"
-            android:background="@drawable/restart_bg" />
+            android:background="@drawable/restart_bg"
+            android:filterTouchesWhenObscured="true" />
 
 
 
@@ -43,7 +46,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20.0dip"
         android:layout_marginBottom="20dip"
-        android:background="@drawable/letsplayclickxml" />
+        android:background="@drawable/letsplayclickxml"
+        android:filterTouchesWhenObscured="true" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -58,7 +62,7 @@
         android:id="@+id/imageView2"
         android:layout_width="180.0dip"
         android:layout_height="105.0dip"
-        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignStart="@+id/imageView1"
         android:layout_alignParentTop="true"
         android:layout_marginTop="14.0dip"
         android:contentDescription="@string/app_name"
@@ -69,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/admob_publisher_id" />
 

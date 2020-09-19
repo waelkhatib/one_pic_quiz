@@ -22,6 +22,8 @@
             android:id="@+id/button1"
             android:layout_width="60.0dip"
             android:layout_height="30.0dip"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:filterTouchesWhenObscured="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:background="@drawable/back" />
@@ -47,20 +49,10 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="14.0dip"
+            android:layout_centerInParent="true"
             android:text=""
             android:textAppearance="?android:textAppearanceMedium" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/coin"
-            android:contentDescription="@string/app_name" />
     </RelativeLayout>
 </RelativeLayout>
     <RelativeLayout
@@ -150,11 +142,13 @@
                 android:id="@+id/button3"
                 android:layout_width="55.0dip"
                 android:layout_height="55.0dip"
-                style="?android:attr/borderlessButtonStyle"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:filterTouchesWhenObscured="true"
                     android:background="@drawable/bo4" />
                 <Button
                 android:id="@+id/button6"
-              style="?android:attr/borderlessButtonStyle"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:filterTouchesWhenObscured="true"
               android:layout_width="55.0dip"
                 android:layout_height="55.0dip"
                 android:background="@drawable/bo3"
@@ -164,9 +158,11 @@
                 android:layout_width="55.0dip"
                 android:layout_height="55.0dip"
                 android:background="@drawable/bo2"
-                    style="?android:attr/borderlessButtonStyle" />
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:filterTouchesWhenObscured="true" />
                             <Button
-                                style="?android:attr/borderlessButtonStyle"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:filterTouchesWhenObscured="true"
                                 android:id="@+id/button5"
                 android:layout_width="55.0dip"
                 android:layout_height="55.0dip"
@@ -200,80 +196,33 @@
 
                 <Button
                     android:id="@+id/char1"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:background="@drawable/circleshape" 
-                    android:gravity="center"
                     android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/btn_char"/>
 
                 <Button
                     android:id="@+id/char2"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_marginStart="5dp"
-                    android:gravity="center"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char"/>
 
                 <Button
                     android:id="@+id/char3"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:gravity="center"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_marginStart="7dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char"/>
 
                 <Button
                     android:id="@+id/char4"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:gravity="center"
-                    android:layout_marginStart="9dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
 
                 <Button
                     android:id="@+id/char5"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:gravity="center"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
 
                 <Button
                     android:id="@+id/char6"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:gravity="center"
-                    android:layout_marginStart="11dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
                             </LinearLayout>
 
             <LinearLayout
@@ -288,81 +237,33 @@
 
                 <Button
                     android:id="@+id/char7"
-                   android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:gravity="center"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:background="@drawable/circleshape" 
-                    
                     android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/btn_char"/>
 
                 <Button
                     android:id="@+id/char8"
-android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                   android:gravity="center"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
 
                 <Button
                     android:id="@+id/char9"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_marginStart="7dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                   android:gravity="center"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
 
                 <Button
                     android:id="@+id/char10"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:gravity="center"
-                    android:layout_marginStart="9dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    style="?android:attr/borderlessButtonStyle" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
 
                 <Button
                     android:id="@+id/char11"
-                    android:gravity="center"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    style="?android:attr/borderlessButtonStyle" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
 
                 <Button
                     android:id="@+id/char12"
-                    android:gravity="center"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="11dp"
-                    android:background="@drawable/circleshape"
-                   android:text="@string/a"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    style="?android:attr/borderlessButtonStyle" />
+                    android:text="@string/a"
+                    style="@style/btn_char" />
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>

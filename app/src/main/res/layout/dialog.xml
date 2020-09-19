@@ -41,7 +41,8 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:shadowColor="#000000"
-        android:text="" />
+        android:text=""
+        android:filterTouchesWhenObscured="true" />
 
 
 

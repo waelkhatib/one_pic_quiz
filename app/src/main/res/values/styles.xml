@@ -15,6 +15,7 @@
         <item name="android:background">@drawable/app_bg</item>
     </style>
 
+
     <!-- Application theme. -->
 
     <style name="hbtn" parent="@android:style/Widget.Button">
@@ -33,7 +34,18 @@
     <style name="dialogStyle" parent="android:style/Theme.Dialog">
         <item name="android:windowNoTitle">true</item>
     </style>
-    
-    
+
+    <style name="btn_char" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginStart">11dp</item>
+        <item name="android:background">@drawable/circleshape</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>
+
 
 </resources>

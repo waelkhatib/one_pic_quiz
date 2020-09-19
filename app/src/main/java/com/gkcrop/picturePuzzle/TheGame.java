@@ -9,12 +9,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.ref.WeakReference;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -48,6 +48,7 @@ import android.graphics.Typeface;
 import android.graphics.Bitmap.Config;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -62,6 +63,7 @@ import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -141,6 +143,18 @@ private Context mContext;
 		btn_skip= findViewById(R.id.button3);
 		Button btn_back = findViewById(R.id.button1);
 		btn_ask= findViewById(R.id.button6);
+		final TextView coins_txt = findViewById(R.id.textView1);
+		coins_txt.getViewTreeObserver()
+				.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+					@Override
+					public void onGlobalLayout() {
+						Drawable img = getResources().getDrawable(
+								R.drawable.coin);
+						img.setBounds(0, 0, img.getIntrinsicWidth() * coins_txt.getMeasuredHeight() / img.getIntrinsicHeight(), coins_txt.getMeasuredHeight());
+						coins_txt.setCompoundDrawables(img, null, null, null);
+						coins_txt.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+					}
+				});
 
 		/*Button button = (Button)findViewById(R.id.button8);
 		Animation animation = AnimationUtils.loadAnimation(this, R.anim.rippleanimset);
@@ -232,8 +246,8 @@ private Context mContext;
 			createWord(word_array.length);
 			randomChars();
 			TextView lvl_txt = findViewById(R.id.textView2);
-			lvl_txt.setText(" " + lvl + " ");
-			TextView coins_txt = findViewById(R.id.textView1);
+			lvl_txt.setText(String.format("%s%s%s"," ",lvl," "));
+
 			coins_txt.setText(coins);
 		}
 		else
@@ -636,7 +650,7 @@ btn_skip.setOnTouchListener(new View.OnTouchListener() {
 	private void randomChars() {
 		for (int i = 0; i < 12; i++) {
 			randBtn[i].setOnClickListener(randCharClick(randBtn[i]));
-			Random r = new Random();
+			SecureRandom r = new SecureRandom();
 			int i1 = r.nextInt(25);
 			randBtn[i].setText(chars[i1]);
 		}
@@ -736,7 +750,7 @@ private void clear_wrong_letter(final Button button) {
 		dialog.getWindow().setLayout(LayoutParams.MATCH_PARENT,
 				LayoutParams.WRAP_CONTENT);
 		String points = ""
-				+ ((new Random().nextInt(10 - 3) + 3) + word_array.length);
+				+ ((new SecureRandom().nextInt(10 - 3) + 3) + word_array.length);
 		SmartImageView image = dialog
 				.findViewById(R.id.imageDialog);
 		Button dialogBtn = dialog.findViewById(R.id.dialogBtn);
@@ -745,7 +759,7 @@ private void clear_wrong_letter(final Button button) {
 		if (type == 1) {
 			image.setImageResource(R.drawable.corect);
 			dialogBtn.setText(" المتابعة "); // Next level button
-			score.setText("+" + points);
+			score.setText(String.format("%s%s","+" , points));
 			writeData("" + (Integer.parseInt(lvl) + 1) + "|"
 					+ (Integer.parseInt(coins) + Integer.parseInt(points)));
 		} else if (type == 2) {

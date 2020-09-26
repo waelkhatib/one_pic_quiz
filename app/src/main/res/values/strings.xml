@@ -32,19 +32,17 @@
     <string name="how_much_for_skip">35</string>
     
     <string name="first_letter_msg_1">هل تريد اكتشاف الحرف الأول مقابل 15 قطعة نقدية؟</string>
-    <string name="first_letter_msg_2">!يجب أن تملك 15 قطعة نقدية </string>
-    <string name="first_letter_msg_3">!اكتشف الحرف الأول</string>
+    <string name="first_letter_msg_3">اكتشف الحرف الأول!</string>
     <string name="yes">نعم</string>
     <string name="no">لا</string>
     <string name="ok">حسناً</string>
     
     <string name="bomb_msg_1">هل تريد إخفاء ثلاث أحرف مقابل 25 قطعة نقدية؟</string>
-    <string name="bomb_msg_2">!يجب أن تملك 25 قطعة نقدية</string>
-    <string name="bomb_msg_3">!أخفي ثلاث أحرف</string>
+    <string name="bomb_msg_2">يجب أن تملك 25 قطعة نقدية!</string>
+    <string name="bomb_msg_3">أخفي ثلاث أحرف!</string>
     
     <string name="skip_msg_1">هل تريد تجاوز هذا السؤال مقابل 35 قطعة نقدية؟</string>
-    <string name="skip_msg_2">!يجب أن تملك 35 قطعة نقدية</string>
-    <string name="skip_msg_3">!تجاوز سؤال</string>
+    <string name="skip_msg_3">تجاوز سؤال!</string>
     
     <string name="point_give">1|10</string><!-- note that here 1 is indicate 1st stage and 10 is point so here we have 10 point already in that game for first start -->
     
@@ -73,6 +71,8 @@
 	<string name="youtube_link">https://play.google.com/store/apps/developer?id=android+tr</string>
 	<string name="website_link">http://simplexso.com</string>
     <string name="_5">+5</string>
+    <string name="skip_msg_2">يجب أن تملك 35 قطعة نقدية!</string>
+    <string name="first_letter_msg_2">يجب أن تملك 15 قطعة نقدية!</string>
 
 
 </resources>
